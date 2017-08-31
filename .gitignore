@@ -1,2 +1,4 @@
 .idea/
 iota.crowdfund.iml
+/node_modules/
+/dist/
