@@ -10,8 +10,6 @@ import {Component} from "@angular/core";
     styles: [`
         main{
             padding-top: 60px;
-            height: 100%;
-            text-align: center;
         }
         /* todo zwiens: remove this hack for now. But, pushing b/c it's just css*/
         footer {
