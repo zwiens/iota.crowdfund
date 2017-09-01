@@ -8,9 +8,17 @@ import {ProjectService} from "../shared/services/project.service";
 @Component({
     selector: "project-component",
     template: `
+        <h1>URGENT!! Record this URL. It is the only way to look at the project for this PoC.</h1>
+        <h2>
+            {{project.title}}
+        </h2>
         <p>
-            id: {{project.id}} title: {{project.title}} description: {{project.description}} amount: {{project.targetAmount}}
+            {{project.description}}
         </p>
+        <p>
+            0 MIOTA raised so far. This project's goal is: {{project.targetAmount}}
+        </p>
+        
     `,
     styles: [`
     `]
