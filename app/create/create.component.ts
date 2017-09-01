@@ -1,5 +1,7 @@
 import {Component, Output, EventEmitter} from "@angular/core";
 import {ProjectModel} from "../shared/models/project-model";
+import {UUID} from "angular2-uuid";
+
 @Component({
     selector: 'create-page',
     template: `
@@ -25,12 +27,12 @@ import {ProjectModel} from "../shared/models/project-model";
         </form>
   `,
     styles: [`
-    form   {
-      padding-top: 20px;
-      background: #ECF0F1;
-      border-radius: 3px;
-      margin-bottom: 30px;
-    }
+        form   {
+          padding-top: 20px;
+          background: #ECF0F1;
+          border-radius: 3px;
+          margin-bottom: 30px;
+        }
   `],
 })
 
@@ -40,7 +42,7 @@ export class CreateComponent {
     newProject = new ProjectModel();
 
     onSubmit() {
-        this.newProject.id = "1"//todo zwiens uuid
+        this.newProject.id = UUID.UUID();
         console.log(this.newProject);
         this.newProject = new ProjectModel();
     }
