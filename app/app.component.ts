@@ -11,11 +11,6 @@ import {Component} from "@angular/core";
         main{
             padding-top: 60px;
         }
-        /* todo zwiens: remove this hack for now. But, pushing b/c it's just css*/
-        footer {
-            padding-top: 50px;
-        }
-        
     `]
 })
 

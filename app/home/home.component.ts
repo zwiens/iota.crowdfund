@@ -13,7 +13,8 @@ import {Component} from "@angular/core";
             PoW.
         </p>
         <p class="text-justify">
-            Get started by clicking by clicking "Create" in the header.
+            Get started by clicking by clicking "Create" in the header. Currently, you need the url of a project to view it.
+            So don't lose it! 
         </p>
   `,
     styles: [`        

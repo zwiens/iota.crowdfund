@@ -1,12 +1,12 @@
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { SearchComponent } from './search/search.component';
 import { CreateComponent } from './create/create.component';
+import {ProjectComponent} from "./project/project.component";
 
 const appRoutes: Routes = [
     { path: '', component: HomeComponent },
-    { path: 'search', component: SearchComponent },
+    { path: 'project', component: ProjectComponent },
     { path: 'create', component: CreateComponent }
 ];
 
