@@ -1,6 +1,8 @@
 import {Component, Output, EventEmitter} from "@angular/core";
 import {ProjectModel} from "../shared/models/project-model";
 import {UUID} from "angular2-uuid";
+import {ProjectService} from "../shared/services/project.service";
+import {Router} from "@angular/router";
 
 @Component({
     selector: 'create-page',
@@ -38,12 +40,17 @@ import {UUID} from "angular2-uuid";
 
 
 export class CreateComponent {
+    constructor(
+        private projectService: ProjectService,
+        private router: Router){}
+
     @Output() projectCreated = new EventEmitter();
     newProject = new ProjectModel();
 
     onSubmit() {
         this.newProject.id = UUID.UUID();
-        console.log(this.newProject);
-        this.newProject = new ProjectModel();
+        this.projectService.addProject(this.newProject);
+        this.router.navigate(["/project", this.newProject.id]);
+        this.newProject = new ProjectModel();//todo clear form
     }
 }

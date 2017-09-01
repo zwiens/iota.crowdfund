@@ -3,6 +3,7 @@
  */
 
 import {Component} from "@angular/core";
+import {ProjectService} from "./shared/services/project.service";
 
 @Component({
     selector: 'my-app',
@@ -11,7 +12,8 @@ import {Component} from "@angular/core";
         main{
             padding-top: 60px;
         }
-    `]
+    `],
+    providers: [ProjectService]
 })
 
 export class AppComponent {}
